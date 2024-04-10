@@ -7,9 +7,9 @@ Please consider giving this repository a star ⭐ if you find it helpful! 😉
 ![OverallFramework](./picture/framework.png)
 
 Check out our paper (it will be published soon in Elsevier):
-> Spatiotemporal Gated Traffic Trajectory Simulation with Semantic-aware Graph Learning. <br/> *Yu Wang, Ji Cao, Wenjie Huang, Zhihua Liu, Tongya Zheng†, Mingli Song*. 
+> Spatiotemporal Gated Traffic Trajectory Simulation with Semantic-aware Graph Learning. <br/> *Yu Wang, Ji Cao, Wenjie Huang, Zhihua Liu, Tongya Zheng†, Mingli Song*. [[Link](https://www.sciencedirect.com/science/article/pii/S1566253524001829)]
 
-> **<p align="justify"> Abstract:** Traffic trajectories of various vehicles, bicycles and pedestrians can help understand the traffic dynamics in a fine-grained manner like traffic flow, traffic  congestion and ride-hailing demand. The comprehensive usage of traffic trajectory data has not been fully investigated due to the prevalent privacy  concerns and commercial limitations. The traffic trajectory simulation task  has emerged to generate high-fidelity trajectories in demand for downstream  tasks to fill the gap between the scarce trajectory data and the widespread  applications. Previous state-of-the-art methods build the spatiotemporal dependencies of trajectories with Graph Neural Networks (GNNs) under generative adversarial training, yielding better yet unstable trajectory quality. We  observe that the unsatisfied synthetic trajectories are caused by the insufficient spatiotemporal modeling of road networks and trajectory semantics. In  this paper, we propose a novel SpatioTEmporal GAted (STEGA) framework  equipped with semantic-aware graph learning for traffic trajectory simulation  to enable the explicit modeling of spatiotemporal dependencies throughout  the learning pipeline. On the one hand, STEGA employs a graph encoder  with the semantics of road networks for the spatial points of a trajectory, together with a time encoder for the time points. On the other hand, STEGA devises two spatiotemporal gates with the semantic graphs for the predictions  of the future trajectory. Boosted by the semantic-aware graph learning, the  proposed STEGA outperforms the state-of-the-art counterparts consistently  at both macro- and micro-level metrics on two datasets. Elaborate ablation  studies and downstream tasks of the synthetic trajectories further demonstrate the superiority of STEGA.</p>
+> **<p align="justify"> Abstract:** Traffic trajectories of various vehicles, bicycles and pedestrians can help understand the traffic dynamics in a fine-grained manner like traffic flow, traffic congestion and ride-hailing demand. The comprehensive usage of traffic trajectory data has not been fully investigated due to the prevalent privacy concerns and commercial limitations. The traffic trajectory simulation task has emerged to generate high-fidelity trajectories in demand for downstream tasks to fill the gap between the scarce trajectory data and the widespread applications. Previous state-of-the-art methods build the spatiotemporal dependencies of trajectories with Graph Neural Networks (GNNs) under generative adversarial training, yielding better yet unstable trajectory quality. We observe that the unsatisfied synthetic trajectories are caused by the insufficient spatiotemporal modeling of road networks and trajectory semantics. In this paper, we propose a novel SpatioTEmporal GAted (STEGA) framework equipped with semantic-aware graph learning for traffic trajectory simulation to enable the explicit modeling of spatiotemporal dependencies throughout the learning pipeline. On the one hand, STEGA employs a graph encoder with the semantics of road networks for the spatial points of a trajectory, together with a time encoder for the time points. On the other hand, STEGA devises two spatiotemporal gates with the semantic graphs for the predictions of the future trajectory. Boosted by the semantic-aware graph learning, the proposed STEGA outperforms the state-of-the-art counterparts consistently at both macro- and micro-level metrics on two datasets. Elaborate ablation studies and downstream tasks of the synthetic trajectories further demonstrate the superiority of STEGA. Our code is available at https://github.com/Star607/STEGA.</p>
 
 
 ## 📚 Citation
@@ -20,7 +20,12 @@ If you find our work useful in your research, please consider citing 😄:
   title={Spatiotemporal Gated Traffic Trajectory Simulation with Semantic-aware Graph Learning},
   author={Yu Wang, Ji Cao, Wenjie Huang, Zhihua Liu, Tongya Zheng, Mingli Song},
   journal={Information Fusion},
+  volume={108},
+  pages={102404},
   year={2024},
+  issn={1566-2535},
+  doi={https://doi.org/10.1016/j.inffus.2024.102404},
+  url={https://www.sciencedirect.com/science/article/pii/S1566253524001829}
 } 
 ``` 
 
