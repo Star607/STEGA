@@ -448,7 +448,9 @@ def my_collate_fn(indices, adj, dist_geo, device):
     y_seq = trace_loc[:, 1:].clone()
     mask = trace_tim[:, 1:] == -1
     y_seq[mask] = -1
-    des_seq = y_seq[:, -1].unsqueeze(1).repeat(1, y_seq.shape[-1])
+
+    des = torch.tensor([row[row!=-1][-1] for row in y_seq]).to(y_seq)
+    des_seq = des.unsqueeze(1).repeat(1, y_seq.shape[-1])
 
     return [
         x_seq.to(device),
