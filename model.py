@@ -470,9 +470,9 @@ class MyTransformer(nn.Module):
                 dur_pred[len_mask] = 0
                 loss_dur = self.loss(dur_pred, dur_real)  # (batch, len-1)
                 loss_dur_masked = (
-                    loss_dur * len_mask.float()
+                    loss_dur * (1-len_mask).float()
                 ).sum()  # gives \sigma_euclidean over unmasked elements
-                loss += loss_dur_masked / len_mask.sum()
+                loss += loss_dur_masked / (1-len_mask).sum()
 
             # generate seq based on last idx
             else:
