@@ -353,7 +353,7 @@ class MyTransformer(nn.Module):
         )  # two type distance activation(batch, len-1, n)
 
         weight_tim = (
-            self.time_layer(dist_geo_batch_x.view(-1, C)).view(N, L, C).sigmoid()
+            self.time_layer(dist_geo_batch_x.reshape(-1, C)).reshape(N, L, C).sigmoid()
         )  # last distance activation (batch, len-1, n)
 
         logits_weighted = (
@@ -571,8 +571,8 @@ class MyTransformer(nn.Module):
                             start_pos=t,
                             idx=idx_cond[:,t:t+1],
                             tim_real=tim[:,t:t+1],
-                            adj_batch=adj_batch,
-                            dist_geo_batch_x=dist_geo_batch_x,
+                            adj_batch=adj_batch[:,:t+1,:],
+                            dist_geo_batch_x=dist_geo_batch_x[:,:t+1,:],
                             dist_geo_batch_dest=dist_geo_batch_dest,
                             gnn_emb=gnn_emb,
                         )  # (batch, 1, n)
